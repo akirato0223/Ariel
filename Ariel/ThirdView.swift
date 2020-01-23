@@ -1,15 +1,15 @@
 //
-//  ContentView.swift
+//  ThirdView.swift
 //  Ariel
 //
-//  Created by あきら on 1/16/20.
+//  Created by あきら on 1/17/20.
 //  Copyright © 2020 Akira. All rights reserved.
 //
 
 import SwiftUI
 
 
-struct TopBarMenu: View {
+struct bTopBarMenu: View {
     var body: some View {
         HStack {
             Image(systemName: "line.horizontal.3")
@@ -24,23 +24,21 @@ struct TopBarMenu: View {
             .padding()
     }
 }
-struct BottomBarManu: View {
+struct bBottomBarManu: View {
 
 //    @State private var showAlert = false
     @State private var showingSecondVC = false
     var body: some View
     {
-        HStack {
-            Image(systemName: "xmark")
-                .font(.system(size: 30))
-                .foregroundColor(.black)
+        HStack (alignment: .center){
 
+Spacer()
             Button(action: {
 //                self.showAlert = true
                 self.showingSecondVC.toggle()
             }) {
-                Text("Let's Send a Message!")
-                    .font(.system(.subheadline, design: .rounded))
+                Text("Text him and apologize?😭😭😭")
+                    .font(.system(size: 30, design: .rounded))
                     .bold()
                     .foregroundColor(.white)
                     .padding(.horizontal, 35)
@@ -50,10 +48,7 @@ struct BottomBarManu: View {
 
             }
                 .padding(.horizontal, 20)
-            Image(systemName: "heart")
-                .font(.system(size: 30))
-                .foregroundColor(.black)
-
+            Spacer()
         }
 //            .alert(isPresented: $showAlert) {
 //                Alert(title: Text("Warning"), message: Text("This person is human and you are not allowed to get close to humans"), primaryButton: .default(Text("I don't care because I love him!"), action: {
@@ -63,12 +58,13 @@ struct BottomBarManu: View {
 //                        }), secondaryButton: .cancel(Text("I am sorry"))
 //                )
 //        }
-            .sheet(isPresented: $showingSecondVC){
-              SecondView()
+        .sheet(isPresented: $showingSecondVC) {
+            SecondView()
         }
     }
 }
-struct ContentView: View {
+
+struct ThirdView: View {
     @GestureState private var dragState = DragState.inactive
     private let dragThreshold: CGFloat = 80.0
 
@@ -110,7 +106,7 @@ struct ContentView: View {
         cardViews.removeFirst()
 
         self.lastIndex += 1
-        let character = characters[lastIndex % characters.count]
+        let character = characters2[lastIndex % characters2.count]
 
         let newCardView = CardView(image: character.image, name: character.name)
 
@@ -120,7 +116,7 @@ struct ContentView: View {
         var views = [CardView]()
 
         for index in 0..<2 {
-            views.append(CardView(image: characters[index].image, name: characters[index].name))
+            views.append(CardView(image: characters2[index].image, name: characters2[index].name))
 
         }
         return views
@@ -139,7 +135,7 @@ struct ContentView: View {
     var body: some View {
 
         VStack {
-
+            Spacer()
             TopBarMenu()
             Spacer()
 
@@ -190,36 +186,37 @@ struct ContentView: View {
             }
 
 
-            Spacer(minLength: 20)
+            Spacer(minLength: 10)
 
-            BottomBarManu()
+            bBottomBarManu()
                 .opacity(dragState.isDragging ? 0.0 : 1.0)
                 .animation(.default)
+            Spacer()
 
 
-        }
+        }.frame(minWidth: 0, maxWidth: .infinity, maxHeight: .infinity)
+            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.black]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .edgesIgnoringSafeArea(.all)
 
     }
+
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {
-//        Group {
-        ContentView()
-//            TopBarMenu().previewLayout(.sizeThatFits)
-//            BottomBarManu().previewLayout(.sizeThatFits)
-//        }
+        ThirdView()
     }
 }
 
 extension AnyTransition {
-    static var trailingBottom: AnyTransition {
+    static var btrailingBottom: AnyTransition {
         AnyTransition.asymmetric(insertion: .identity, removal: AnyTransition.move(edge: .trailing).combined(with: .move(edge: .bottom)))
     }
-    static var leadingBottom: AnyTransition {
+    static var bleadingBottom: AnyTransition {
         AnyTransition.asymmetric(insertion: .identity, removal: AnyTransition.move(edge: .leading).combined(with: AnyTransition.move(edge: .bottom)))
     }
 }
+
 
 
 

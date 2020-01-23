@@ -16,6 +16,10 @@
 		E950BBD623D08649003A7699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E950BBD423D08649003A7699 /* LaunchScreen.storyboard */; };
 		E950BBE123D08649003A7699 /* ArielTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950BBE023D08649003A7699 /* ArielTests.swift */; };
 		E950BBEC23D08649003A7699 /* ArielUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950BBEB23D08649003A7699 /* ArielUITests.swift */; };
+		E950BBFC23D08849003A7699 /* Ariel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950BBFB23D08849003A7699 /* Ariel.swift */; };
+		E950BBFE23D08B91003A7699 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950BBFD23D08B91003A7699 /* CardView.swift */; };
+		E950BC0423D17472003A7699 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950BC0323D17472003A7699 /* SecondView.swift */; };
+		E950BC0623D1B0B2003A7699 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E950BC0523D1B0B2003A7699 /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		E950BBE723D08649003A7699 /* ArielUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArielUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E950BBEB23D08649003A7699 /* ArielUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArielUITests.swift; sourceTree = "<group>"; };
 		E950BBED23D08649003A7699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E950BBFB23D08849003A7699 /* Ariel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ariel.swift; sourceTree = "<group>"; };
+		E950BBFD23D08B91003A7699 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E950BC0323D17472003A7699 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		E950BC0523D1B0B2003A7699 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +112,15 @@
 				E950BBC623D08641003A7699 /* AppDelegate.swift */,
 				E950BBC823D08641003A7699 /* SceneDelegate.swift */,
 				E950BBCD23D08641003A7699 /* ContentView.swift */,
+				E950BBFD23D08B91003A7699 /* CardView.swift */,
 				E950BBCF23D08649003A7699 /* Assets.xcassets */,
 				E950BBD423D08649003A7699 /* LaunchScreen.storyboard */,
 				E950BBD723D08649003A7699 /* Info.plist */,
 				E950BBCA23D08641003A7699 /* Ariel.xcdatamodeld */,
 				E950BBD123D08649003A7699 /* Preview Content */,
+				E950BBFB23D08849003A7699 /* Ariel.swift */,
+				E950BC0323D17472003A7699 /* SecondView.swift */,
+				E950BC0523D1B0B2003A7699 /* ThirdView.swift */,
 			);
 			path = Ariel;
 			sourceTree = "<group>";
@@ -270,9 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E950BC0623D1B0B2003A7699 /* ThirdView.swift in Sources */,
+				E950BC0423D17472003A7699 /* SecondView.swift in Sources */,
 				E950BBC723D08641003A7699 /* AppDelegate.swift in Sources */,
+				E950BBFE23D08B91003A7699 /* CardView.swift in Sources */,
 				E950BBCC23D08641003A7699 /* Ariel.xcdatamodeld in Sources */,
 				E950BBCE23D08641003A7699 /* ContentView.swift in Sources */,
+				E950BBFC23D08849003A7699 /* Ariel.swift in Sources */,
 				E950BBC923D08641003A7699 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
